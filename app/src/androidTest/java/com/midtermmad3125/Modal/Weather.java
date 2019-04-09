@@ -2,7 +2,7 @@ package com.midtermmad3125.Modal;
 
 public class Weather {
 
-    private  String city;
+    private String city;
     private String longitude;
     private String latitide;
     private String poplulation;

@@ -19,7 +19,8 @@ public class List_Adapter  extends RecyclerView.Adapter<List_Adapter.Myviewholde
 
     private List<Weather> WeatherList;
     private Context mcontext;
-    public List_Adapter(List<Weather> weathers) {
+    public List_Adapter(List<Weather> weathers)
+    {
         WeatherList = weathers;
     }
 
