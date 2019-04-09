@@ -58,10 +58,11 @@ public class WeatherListActivity extends AppCompatActivity {
 
                     JSONObject mJSONObj = mJSONArray.getJSONObject(i);
 
-                    if (mJSONObj.has("country")) {
+                    if (mJSONObj.has("city")) {
 
                         String city = mJSONObj.getString("city");
-                        String countrycode = mJSONObj.getString("country");
+                        String longitude = mJSONObj.getString("longitude");
+                        String latitude = mJSONObj.getString("latitude");
                         String population = mJSONObj.getString("population");
 
                     }
