@@ -34,8 +34,12 @@ public class List_Adapter  extends RecyclerView.Adapter<List_Adapter.Myviewholde
 
     @Override
     public void onBindViewHolder(@NonNull Myviewholder myviewholder, int i) {
+
         final Weather w1 = WeatherList.get(i);
 
+        myviewholder.city.setText("city Name::"+w1.getCity());
+        myviewholder.city.setText("city Name::"+w1.getLatitide());
+        myviewholder.city.setText("city Name::"+w1.getLongitude());
         myviewholder.city.setText("city Name::"+w1.getCity());
 
         myviewholder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -55,14 +59,18 @@ public class List_Adapter  extends RecyclerView.Adapter<List_Adapter.Myviewholde
 
     public class Myviewholder extends RecyclerView.ViewHolder
     {
-        public TextView city,longitude,latitude,population;
+        public TextView city;
+        public TextView min;
+        public TextView max;
+        public TextView description;
 
         public Myviewholder(  View itemView) {
             super(itemView);
 
-             //String city=(TextView) itemView.findViewById(R.id.textCity);
-            // String longitude =(TextView) itemView.findViewById(R.id.textlong);
-             //String
+             city = (TextView) itemView.findViewById(R.id.textCity);
+             min = (TextView) itemView.findViewById(R.id.Min);
+             max = (TextView) itemView.findViewById(R.id.Max);
+             description= (TextView) itemView.findViewById(R.id.desc);
 
 
         }
